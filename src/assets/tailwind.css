@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply uppercase tracking-wider font-PublicSans text-sm/3 border border-portfolio-primary-darkblue text-portfolio-primary-darkblue mt-6;
+    }
+    .prg {
+        @apply font-PublicSans text-base text-portfolio-primary-darkblue 
+    }
+
+    .hdr {
+        @apply font-IbarraRealNova font-bold capitalize text-xl text-portfolio-primary-darkblue
+    }
+}
