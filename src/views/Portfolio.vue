@@ -18,6 +18,8 @@
 import OddProject from '../components/OddProject.vue'
 import EvenProject from '../components/EvenProject.vue'
 
+import axios from 'axios'
+
 export default {
     components: { OddProject, EvenProject },
     data() {
@@ -26,10 +28,16 @@ export default {
         }
     },
     mounted() {
-       fetch( 'http://localhost:3000/projects' )
+        axios.get('https://festival3224.github.io/portfolio_data_api/db.json')
+            .then((res) => {this.projects = res.data.projects
+                            console.log(res.data.projects)
+                            })
+
+      /*  fetch( 'http://localhost:3000/projects' )
         .then(res => res.json())
         .then(data => this.projects = data)
-        .catch(err => console.log(err.message))
+        .catch(err => console.log(err.message)) */
+
     }
 
 }

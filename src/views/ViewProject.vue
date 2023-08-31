@@ -8,8 +8,8 @@
 
         <div class="grid grid-cols-3">
             <div class="col-span-1 border-t-2">
-                <h1 class="hdr py-8">{{ title }}</h1>
-                <p class="prg pb-4">{{ details }}</p>
+                <h1 class="hdr py-8">{{ dproject.title }}</h1>
+                <p class="prg pb-4">{{ dproject.details }}</p>
                 <p class="py-4">Interaction Design / Front End Development</p>
                 <p class="py-4">HTML / CSS / JS</p>
                 <button class="btn w-[178px] h-12 mb-12">visit website</button>
@@ -18,7 +18,7 @@
 
             <div class="col-span-2 pl-28">
                 <h2 class="font-IbarraRealNova text-lg">Project Background</h2>
-                <p class="py-10">{{ description }}</p>
+                <p class="py-10">{{ dproject.description }}</p>
                 <h2 class="font-IbarraRealNova text-lg">Static Previews</h2>
                 <img :src="images[1]" class="py-4" alt="#hero">
                 <img :src="images[2]" class="py-4" alt="#hero">
@@ -54,33 +54,28 @@
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
     props: ['id'],
     data() {
         return {
-            title: '',
             prevTitle: 'previous',
             nextTitle: 'next',
-            details: '',
-            description: '',
+            
             images: [],
-            uri: 'http://localhost:3000/projects/' + this.id
+
+            url: 'https://festival3224.github.io/portfolio_data_api/db.json' ,
+            dproject: {}
         }
     },
-    mounted() {        
-        fetch(this.uri)
-            .then(res => res.json())
-            .then(data => {
-                this.title = data.title,
-                this.details = data.details,
-                this.images = data.images,
-                this.description = data.description,
-
-                this.prevTitle = data.id-1,
-                this.nextTitle = data.id+1
-                // console.log(data.id)        
-            })
+    mounted() {
+        axios.get(this.url)
+            .then(res => {this.dproject = res.data.projects[this.id-1]
+                          this.images = this.dproject.images  
+                          console.log(res.data.projects[this.id])
+                        })
+           
     }
 }
 </script>
