@@ -68,9 +68,23 @@ export default {
             
             images: [],
 
+            // url: 'https://festival3224.github.io/portfolio_data_api/db.json' ,
             currentProject: {}
         }
     },
+
+    // mounted() {
+    //     axios.get(this.url)
+    //         .then(res => {this.dproject = res.data.projects[this.id-1]
+    //                       this.images = this.dproject.images 
+    //                       this.getSlideCount = res.data.projects.length
+    //                       this.prevTitle = res.data.projects[this.id-2].title
+    //                       this.nextTitle = res.data.projects[this.id].title
+    //                       console.log("current: ", this.dproject)
+    //                       console.log("length: ", this.getSlideCount)
+    //                       console.log("router: ", this.$route.path)
+    //                     })           
+    // },
 
     methods: {
         async getProgect(index) {

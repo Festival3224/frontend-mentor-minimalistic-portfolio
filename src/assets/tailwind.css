@@ -4,13 +4,13 @@
 
 @layer components {
     .btn {
-        @apply uppercase tracking-wider font-PublicSans text-sm/3 border border-portfolio-primary-darkblue text-portfolio-primary-darkblue mt-6;
+        @apply uppercase tracking-wider font-PublicSans text-sm/3 border border-portfolio-primary-darkblue text-portfolio-primary-darkblue;
     }
     .prg {
         @apply font-PublicSans text-base text-portfolio-primary-darkblue 
     }
 
     .hdr {
-        @apply font-IbarraRealNova font-bold capitalize text-xl text-portfolio-primary-darkblue
+        @apply font-IbarraRealNova font-bold capitalize text-portfolio-primary-darkblue
     }
 }

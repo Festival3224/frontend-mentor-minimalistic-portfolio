@@ -2,17 +2,9 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
-    screens: {
-      'sm': '375px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1110px',
-      // '2xl': '1536px',
-    },
-
     letterSpacing: {
-      tightest: '-.028em',
-      tighter: '-.0225em',
+      tightest: '-.075em',
+      tighter: '-.05em',
       normal: '0',
       wider: '.1em',
       widest: '.25em',
@@ -32,15 +24,15 @@ module.exports = {
       IbarraRealNova: ["Ibarra Real Nova, serif"],
       PublicSans: ["Public Sans, sans-serif"],
     },
-    container: {
+    /* container: {
       padding: "2rem",
-      center: true,    
-      screens: {
-        sm: '375px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1110px',
-      }
+      center: true,
+    }, */
+    screens: {
+      sm: '375px',
+      md: '768px',
+      lg: '1440px',
+      // xl: '1440px',
     },
     fontSize: {
       'sm': ['15px', '30px'],

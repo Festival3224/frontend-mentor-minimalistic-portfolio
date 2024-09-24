@@ -1,12 +1,38 @@
 <template>
-    <div class="relative bg-[url('../images/homepage/desktop/image-homepage-hero.jpg')] mx-auto max-w-[1110px] h-[600px]">
-        <div class="absolute bottom-0 left-0 bg-white w-[445px] pt-11 pb-[70px] px-1">
-            <h1 class="font-IbarraRealNova font-bold text-2xl">Hey, I'm Alex Spencer  and  I  love building beautiful websites</h1>
+    <!-- HomeView page -->
+
+    <!-- Hero -->
+    <section class="md:relative container px-0
+                    w-fit h-full flex flex-col">
+        <div class="w-fit h-full mx-auto">
+            <img src="/../images/homepage/mobile/image-homepage-hero.jpg"
+                 alt="#hero_mobile"
+                 class="md:hidden">
+            <img src="/../images/homepage/tablet/image-homepage-hero.jpg"
+                 alt="#hero_tablet"
+                 class="hidden md:block xl:hidden">
+            <img src="/../images/homepage/desktop/image-homepage-hero.jpg"
+                 alt="#hero_desktop"
+                 class="hidden xl:block">         
         </div>
-        <div class="absolute bottom-0 left-0 flex">
-            <button class="w-12 h-12 border border-portfolio-primary-darkblue bg-portfolio-primary-darkblue
-                    text-center items-center pl-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14"><g fill="none" fill-rule="evenodd" stroke="#5FB4A2"><path d="M0 9l8 4 8-4"/><path opacity=".5" d="M0 5l8 4 8-4"/><path opacity=".25" d="M0 1l8 4 8-4"/></g></svg>
+                    
+        <div class="bg-white mx-auto 
+                    md:absolute md:bottom-0 md:left-0
+                    w-11/12 md:w-3/4 xl:w-2/5 py-8 md:pb-24 md:pt-14
+                    xl:pt-9">
+            <h1 class="font-IbarraRealNova font-bold 
+                        leading-[42px] xl:leading-[50px] tracking-tighter xl:tracking-tightest
+                        text-xl  xl:text-2xl md:w-4/5 xl:w-full align-text-top">
+                Hey, I'm Alex Spencer  and  I  love building beautiful websites
+            </h1>
+        </div>
+
+        <div class="my-4 md:my-0 w-11/12 md:w-2/3 mx-auto flex
+                    md:absolute md:bottom-0 md:left-0">
+            <button class="w-12 h-12 border
+                         border-portfolio-primary-darkblue bg-portfolio-primary-darkblue
+                           text-center items-center pl-4">
+                <icon name="down-arrows"></icon>                    
             </button>
 
             <button class="font-PublicSans text-base uppercase border border-portfolio-primary-blue  w-[150px]
@@ -15,33 +41,29 @@
                     @click="goto('aboutMe')">
                 about me
             </button>
-        </div>
-        
-    </div>
+        </div>        
+    </section>
 
-    <div class="mx-auto max-w-[1110px] grid grid-cols-2 py-[150px]"
-         ref="aboutMe">
-        <div class="max-w-full h-max">
-            <img src="/../images/homepage/desktop/image-homepage-profile.jpg" alt="#profile">
-        </div>
+    <!-- About Me -->
+    <section ref="aboutMe"
+             class="container flex flex-wrap md:flex-nowrap md:items-stretch py-24 lg:pr-24">
+        <img src="/../images/homepage/desktop/image-homepage-profile.jpg"
+             class="block md:hidden xl:block">
+        <img src="/../images/homepage/tablet/image-homepage-profile.jpg"
+             alt="#AboutMe"
+             class="hidden md:block xl:hidden">   
 
-        <div class="grid grid-cols-7">
-            <div class="col-span-1 "></div>
-            <div class="col-span-5 border-y-2 mx-[23px]">
-                <h1 class="hdr py-8">About Me</h1>
-                <p class="prg">I'm a junior front-end developer looking for a new role in an exciting company. I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript. When writing JavaScript code, I mostly use React, but I can adapt to whatever tools are required. I’m based in London, UK, but I’m happy working remotely and have experience in remote teams. When I’m not coding, you’ll find me outdoors. I love being out in nature whether that’s going for a walk, run or cycling. I’d love you to check out my work.</p>
-                
-                <router-link :to="{ path: '/portfolio' }">
-                    <button class="btn w-[202px] h-[48px]">
-                        go to portfolio
-                    </button>
-                </router-link>
-            </div>
-            <div class="col-span-1 "></div>
-            
+        <div class="border-y-2 mt-8 md:mt-0 md:ml-[84px] lg:ml-[92px]">
+            <h1 class="hdr text-xl py-8">About Me</h1>
+            <p class="prg">I'm a junior front-end developer looking for a new role in an exciting company. I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript. When writing JavaScript code, I mostly use React, but I can adapt to whatever tools are required. I’m based in London, UK, but I’m happy working remotely and have experience in remote teams. When I’m not coding, you’ll find me outdoors. I love being out in nature whether that’s going for a walk, run or cycling. I’d love you to check out my work.</p>
+            <router-link :to="{ path: '/portfolio' }">
+                <button class="btn mb-12 mt-10 w-[202px] h-[48px]">
+                    go to portfolio
+                </button>
+            </router-link>
         </div>
-        
-    </div>
+    </section>
+    
 </template>
 
 <script>
