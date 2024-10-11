@@ -8,11 +8,11 @@
 
         <div class="grid grid-cols-3">
             <div class="col-span-1 border-t-2">
-                <h1 class="hdr py-8">{{ currentProject.title }}</h1>
+                <h1 class="hdr text-xl mt-12 md:py-4">{{ currentProject.title }}</h1>
                 <p class="prg pb-4">{{ currentProject.details }}</p>
-                <p class="py-4 text-portfolio-primary-cyan text-base font-semibold  ">Interaction Design / Front End Development</p>
+                <p class="pt-2 text-portfolio-primary-cyan text-base font-semibold  ">Interaction Design / Front End Development</p>
                 <p class="prg py-4 text-portfolio-primary-cyan font-semibold">HTML / CSS / JS</p>
-                <button class="btn w-[178px] h-12 mb-12">visit website</button>
+                <button class="btnS w-[178px] h-12 mb-12">visit website</button>
                 <div class="h-0 border w-full"></div>
             </div>
 
@@ -32,14 +32,14 @@
                     </svg>
 
                     <div class="flex-col pl-8 py-10" @click="prevProject">
-                        <h2 class="text-lg"> {{ prevTitle }}</h2>
+                        <h2 class="hdr text-lg"> {{ prevTitle }}</h2>
                         <p class="prg text-left">Previous Project</p>
                     </div>                    
                 </div>
 
                 <div class="col-span-1 flex justify-end items-center">
                     <div class="flex-col pr-8" @click="nextProject">
-                        <h2 class="text-lg text-right"> {{ nextTitle }}</h2>
+                        <h2 class="hdr text-lg text-right"> {{ nextTitle }}</h2>
                         <p class="prg text-right">Next Project</p>
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16">

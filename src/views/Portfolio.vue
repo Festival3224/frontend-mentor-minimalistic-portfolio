@@ -2,7 +2,7 @@
     <!-- Portfolio main page -->
     <div class="max-w-screen-xl mx-auto">
         
-        <div v-if="projects.length" class="pb-10">
+        <div v-if="projects.length" class="pb-10 md:pb-14">
             <div v-for="project in projects" :key="project.id">
                 <router-link :to="{ name: 'ViewProject', params: { id: project.id } }">
                     <div v-if="(project.id % 2)">

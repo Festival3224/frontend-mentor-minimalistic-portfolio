@@ -17,16 +17,7 @@ const router = createRouter({
       path: '/portfolio',
       name: 'Portfolio',
       component: Portfolio,
-      meta: { preFooter: true }/* ,
-      children: [
-        {
-          path: ':id',
-          name: 'ViewProject',
-          component: ViewProject,
-          props: true,
-          meta: { preFooter: true }
-        }
-      ] */
+      meta: { preFooter: true }
     },
     {
       path: '/contact',

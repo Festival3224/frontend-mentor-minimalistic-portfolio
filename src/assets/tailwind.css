@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 @layer components {
-    .btn {
-        @apply uppercase tracking-wider font-PublicSans text-sm/3 border border-portfolio-primary-darkblue text-portfolio-primary-darkblue;
+    .btnS {
+        @apply uppercase tracking-wider font-PublicSans text-sm/3 border border-portfolio-primary-darkblue text-portfolio-primary-darkblue
+                hover:bg-portfolio-primary-darkblue hover:text-portfolio-secondary-lightgrey;
     }
     .prg {
         @apply font-PublicSans text-base text-portfolio-primary-darkblue 

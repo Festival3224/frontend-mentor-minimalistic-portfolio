@@ -12,7 +12,7 @@
                         <p class="prg md:py-2 pr-2 md:px-0 tracking-normal text-sm lg:text-base">{{  project.details }}</p>
 
                         <router-link :to="{ name: 'ViewProject', params: { id: project.id }}" class="py-6 md:py-4">
-                            <button class="btn mt-0 w-44 h-[48px]" @click="showDetails()">
+                            <button class="btnS mt-0 w-44 h-[48px]" @click="showDetails()">
                                 view project
                             </button>
                         </router-link>
