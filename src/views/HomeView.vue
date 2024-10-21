@@ -59,9 +59,9 @@
     <!-- About Me -->
     <section ref="aboutMe"
              class="container flex flex-wrap md:flex-nowrap md:items-stretch py-24 lg:pr-24">
-        <img :src="heroImageLg" alt="Homepage Hero"
+        <img :src="profileImageLg" alt="Homepage Hero"
              class="block md:hidden xl:block">
-        <img :src="heroImageMd"
+        <img :src="profileImageMd"
              alt="#AboutMe"
              class="hidden md:block xl:hidden">   
 
@@ -82,7 +82,14 @@
     import heroImageLg from '@/assets/images/homepage/desktop/image-homepage-hero.jpg';
     import heroImageMd from '@/assets/images/homepage/tablet/image-homepage-hero.jpg';
     import heroImageSm from '@/assets/images/homepage/mobile/image-homepage-hero.jpg';
+    import profileImageLg from '@/assets/images/homepage/desktop/image-homepage-profile.jpg';
+    import profileImageMd from '@/assets/images/homepage/tablet/image-homepage-profile.jpg';
     export default {
+        data() {
+            return {
+                heroImageSm, heroImageMd, heroImageLg, profileImageLg, profileImageMd
+            }
+        },
         name: 'Home',
         components: {},
         methods: {
