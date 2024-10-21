@@ -5,13 +5,13 @@
     <section class="md:relative container px-0
                     w-fit h-full flex flex-col">
         <div class="w-fit h-full mx-auto">
-            <img src="/../images/homepage/mobile/image-homepage-hero.jpg"
+            <img :src="heroImageSm"
                  alt="#hero_mobile"
                  class="md:hidden">
-            <img src="/../images/homepage/tablet/image-homepage-hero.jpg"
+            <img :src="heroImageMd"
                  alt="#hero_tablet"
                  class="hidden md:block xl:hidden">
-            <img src="/../images/homepage/desktop/image-homepage-hero.jpg"
+            <img :src="heroImageLg"
                  alt="#hero_desktop"
                  class="hidden xl:block">         
         </div>
@@ -81,6 +81,7 @@
 <script>
     import heroImageLg from '@/assets/images/homepage/desktop/image-homepage-hero.jpg';
     import heroImageMd from '@/assets/images/homepage/tablet/image-homepage-hero.jpg';
+    import heroImageSm from '@/assets/images/homepage/mobile/image-homepage-hero.jpg';
     export default {
         name: 'Home',
         components: {},
