@@ -59,9 +59,9 @@
     <!-- About Me -->
     <section ref="aboutMe"
              class="container flex flex-wrap md:flex-nowrap md:items-stretch py-24 lg:pr-24">
-        <img src="/../images/homepage/desktop/image-homepage-profile.jpg"
+        <img :src="heroImageLg" alt="Homepage Hero"
              class="block md:hidden xl:block">
-        <img src="/../images/homepage/tablet/image-homepage-profile.jpg"
+        <img :src="heroImageMd"
              alt="#AboutMe"
              class="hidden md:block xl:hidden">   
 
@@ -79,6 +79,8 @@
 </template>
 
 <script>
+    import heroImageLg from '@/assets/images/homepage/desktop/image-homepage-hero.jpg';
+    import heroImageMd from '@/assets/images/homepage/tablet/image-homepage-hero.jpg';
     export default {
         name: 'Home',
         components: {},
