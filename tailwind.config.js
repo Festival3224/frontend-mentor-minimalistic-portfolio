@@ -26,6 +26,7 @@ module.exports = {
         "portfolio-secondary-lightgrey": "#FAFAFA",
         "portfolio-secondary-grey": "#eaeaeb",
         "portfolio-secondary-red": "#FA3030",
+        "button-hover-darkcyan": "#55A292",
       },
     },
     fontFamily: {

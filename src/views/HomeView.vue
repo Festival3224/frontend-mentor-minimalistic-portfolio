@@ -29,18 +29,30 @@
 
         <div class="my-4 md:my-0 w-11/12 md:w-2/3 mx-auto flex
                     md:absolute md:bottom-0 md:left-0">
-            <button class="w-12 h-12 border
-                         border-portfolio-primary-darkblue bg-portfolio-primary-darkblue
-                           text-center items-center pl-4">
-                <icon name="down-arrows"></icon>                    
+
+            <button
+                class="w-[198px] h-12 flex border group cursor-pointer border-portfolio-primary-darkblue hover:border-button-hover-darkcyan
+                        bg-portfolio-primary-blue hover:bg-portfolio-primary-cyan"
+                @click="goto('aboutMe')">
+
+                <!-- Icon Part -->
+                <span
+                    class="w-12 h-full flex items-center justify-center
+                        bg-portfolio-primary-darkgray group-hover:bg-button-hover-darkcyan">
+                    <icon
+                    name="down-arrows"
+                    class="stroke-portfolio-primary-cyan group-hover:stroke-white"
+                    ></icon>
+                </span>
+
+                <!-- Text Part -->
+                <span
+                    class="w-[150px] h-full flex items-center justify-center text-white
+                        uppercase font-PublicSans text-base">
+                    About Me
+                </span>
             </button>
 
-            <button class="font-PublicSans text-base uppercase border border-portfolio-primary-blue  w-[150px]
-                        bg-portfolio-primary-blue 
-                        text-center items-center text-white"
-                    @click="goto('aboutMe')">
-                about me
-            </button>
         </div>        
     </section>
 

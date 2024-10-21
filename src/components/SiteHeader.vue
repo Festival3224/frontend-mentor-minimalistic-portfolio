@@ -2,7 +2,7 @@
     <!-- Header with navigation bar -->
     <header class="bg-white text-white font-bold">    
      <nav class="flex justify-between items-center
-                pl-4 pr-0 md:px-4 mx-auto max-w-[calc(1110px)] py-8">
+                pl-4 pr-0 md:px-4 mx-auto max-w-screen-xl  py-8">
         <!-- Logo  -->
         <icon name="logo" class="w-16 h-8 fill-portfolio-primary-darkblue" />
 

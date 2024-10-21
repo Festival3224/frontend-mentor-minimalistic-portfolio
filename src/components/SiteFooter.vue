@@ -13,7 +13,14 @@
 
         <div class="flex flex-col md:flex-row items-center text-white uppercase gap-5 md:gap-10 text-sm">
           <router-link :to="{ name: 'Home' }">HOME</router-link>
-          <router-link :to="{ name: 'Portfolio' }">portfolio</router-link>
+
+          <router-link
+            :to="{ name: 'Portfolio' }"
+            active-class="text-portfolio-primary-cyan"
+            :class="{ 'text-portfolio-primary-cyan': isPortfolioActive }">
+              portfolio
+          </router-link>
+
           <router-link :to="{ name: 'Contact' }" >contact me</router-link>
         </div>
       </div>
@@ -27,6 +34,16 @@
 
   </footer> 
 </template>
+
+<script>
+export default {
+  computed: {
+        isPortfolioActive() {
+            return this.$route.name === 'Portfolio' || this.$route.name === 'ViewProject';
+        }
+    },
+}
+</script>
   
   
   
