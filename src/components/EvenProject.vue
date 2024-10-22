@@ -36,7 +36,7 @@ import ViewProject from '../views/ViewProject.vue';
 export default {
     components: {  ViewProject },
     props: ['project']
-    /* data() { return { uri: 'http://localhost:3000/projects/' + this.project.id } } */
+
  }
 </script>
 

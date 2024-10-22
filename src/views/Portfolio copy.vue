@@ -34,15 +34,10 @@ export default {
     mounted() {
         axios.get('https://festival3224.github.io/portfolio_data_api/db.json')
             .then((res) => {
-                const baseURL = import.meta.env.BASE_URL;
-                this.projects = res.data.projects.map(project => ({
-                    ...project,
-                    imageUrl: `${baseURL}${project.imageUrl}`
-                }));
+                this.projects = res.data.projects
             })
             .catch(err => console.log(err.message));
     }
-
 
 }
 </script>
