@@ -129,9 +129,7 @@ export default {
         async getProgect(index) {
             const response = await axios.get('https://festival3224.github.io/portfolio_data_api/db.json')
             this.currentProject = response.data.projects[index-1]
-            this.images = this.currentProject.images.map(image => {
-                return `${import.meta.env.BASE_URL}${image}`
-            })
+            this.images = this.currentProject.images
             this.getProjectCount = response.data.projects.length
 
             if (index-1 === 0){
