@@ -1,1 +1,0 @@
-import{o as e,c as t,a as o}from"./index-ab3ace24.js";const s={xmlns:"http://www.w3.org/2000/svg",width:"61",height:"32"},n=o("path",{"fill-rule":"evenodd",d:"M60.082 5.878 44.408 32 28.735 5.878h31.347zM15.673 0l15.674 26.122H0L15.673 0z"},null,-1),c=[n];function r(l,a){return e(),t("svg",s,c)}const h={render:r};export{h as default,r as render};
